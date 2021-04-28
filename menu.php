@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+<?php session_start()?>
 
 <html>
     <head>
@@ -40,6 +35,11 @@ and open the template in the editor.
             echo "Enregistrer en temps que salarié".'<br>';
             echo 'profil : '.htmlspecialchars($_POST["profil"]).'<br>';
             echo 'mail : ' .htmlspecialchars($_POST["login"]).'<br>';
+            $login = htmlspecialchars($_POST["login"]);
+            /*A MODIFIER*/if($login == ""){
+                header("location: http://localhost/projetweb/Erreur.php");
+            }
+            $_SESSION['login'] = $login;
             echo 'mdp : ' .htmlspecialchars($_POST["mdp"]).'<br>';
             echo '</br>';
             ?>

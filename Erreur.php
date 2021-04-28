@@ -20,7 +20,13 @@ and open the template in the editor.
         
         <h2>Désolé il semblerait qu'une erreur soit apparu</h2>
         
-        <a href="http://localhost/projetweb/ajouter_salarie.php">Retour</a>
+        <?php if(htmlspecialchars($_SERVER['HTTP_REFERER']) == "http://localhost/projetweb/ajouter_salarie.php")
+        $link = "http://localhost/projetweb/ajouter_salarie.php";
+              else if (htmlspecialchars($_SERVER['HTTP_REFERER']) == "http://localhost/projetweb/authentification.php")
+            $link = "http://localhost/projetweb/authentification.php";
+              ?>
+        
+        <a href="<?php $link ?>">Retour</a>
 
     </body>
     
