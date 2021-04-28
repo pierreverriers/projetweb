@@ -3,7 +3,7 @@
 <html>
     <head>
         <title>Ajouter salarié</title>
-        <link rel="stylesheet" href="ajouter_salarie.css" />
+        <link rel="stylesheet" href="acceuil.css" />
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>

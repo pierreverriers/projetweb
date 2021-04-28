@@ -2,7 +2,7 @@
                       $mysqli -> set_charset("utf8");
                       session_start();
 
-$num=$_GET['i'];
+$num= htmlspecialchars($_GET['i']);
 $_SESSION['num'] = $num;
 
 ?>
